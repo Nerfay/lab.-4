@@ -80,6 +80,7 @@ $area.addEventListener('mousemove', function (e) {
 $area.addEventListener('input', function (e) {
     if(e.target.classList.contains('text')){
         $selectedText = e.target;
+        selectedBoxIndex = e.target.getAttribute('text-index');
         boxes[selectedBoxIndex].text = $selectedText.value;
     }
     setLS('coords', boxes);
